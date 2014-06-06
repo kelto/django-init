@@ -1,0 +1,5 @@
+{% if succeed %}Inscription réussi ! {% endif %}
+<form action="{% url "blog.views.register" %}" method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="SUBMIT" value="submit"/>
+</form>

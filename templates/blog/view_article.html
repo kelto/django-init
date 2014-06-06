@@ -1,0 +1,11 @@
+<!DOCTYPE html PUBLIC "->
+<html>
+<head>
+<title>Django Blog</title>
+</head>
+<body>
+    <h1>{{ article.title }}</h1>
+    <p>auteur: {{ article.author }}, le {{ article.date|date }}</p>
+    <p>{{ article.content | linebreaks }}</p>
+</body>
+</html>

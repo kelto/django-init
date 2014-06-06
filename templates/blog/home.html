@@ -1,0 +1,13 @@
+<!DOCTYPE html PUBLIC "->
+<html>
+<head>
+<title>Django Blog</title>
+</head>
+<body>
+{% for article in last_articles %}
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.content | truncatewords_html:80 }}</p>
+    <a href="{% url "blog.views.view_article" article.id article.slug %}">Lire l'article</a>
+{% empty %}
+    <p>Aucun article.</p>
+{% endfor %}
